@@ -5,7 +5,9 @@ const moment = require('moment');
 
 var now = moment();
 
-console.log('It is the ' chalk.magenta(now.dayOfYear()) + 'th day of the year.')
+console.log('It is '+ chalk.blue( now.format("dddd, MMMM Do YYYY, h:mm:ss a")));
+
+console.log('It is the ' + chalk.magenta(now.dayOfYear() + 'th') + ' sday of the year.')
 
 console.log('It is ' + chalk.cyan(now.get('second')*now.get('minute')*now.get('hour')) + ' seconds into the day')
 
@@ -15,7 +17,7 @@ if(now.isDST === true){
 else {
   console.log('It' + chalk.green(' is not ')+ 'Daylight savings time.');
 }
-if (now.isDST === true) {
+if (now.isLeapYear === true) {
   console.log('It' + chalk.blue(' is ')+ 'a leap year.');
 }
 else{
