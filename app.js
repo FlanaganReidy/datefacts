@@ -9,7 +9,7 @@ console.log('It is '+ chalk.blue( now.format("dddd, MMMM Do YYYY, h:mm:ss a")));
 
 console.log('It is the ' + chalk.magenta(now.dayOfYear() + 'th') + ' sday of the year.')
 
-console.log('It is ' + chalk.cyan(now.get('second')*now.get('minute')*now.get('hour')) + ' seconds into the day')
+console.log('It is ' + chalk.cyan(now.get('second')+ (now.get('minute')* 60) + (now.get('hour')*3600)) + ' seconds into the day')
 
 if(now.isDST === true){
   console.log('It' + chalk.blue(' is ')+ 'Daylight savings time.');
